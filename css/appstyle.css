@@ -1,0 +1,96 @@
+html, body {
+  height:100%;
+  width:100%;
+  background-color: #118AB2;
+}
+
+/* Sections of Layout
+-------------------------------------- */
+/* Generic styles for demo purposes
+-------------------------------------- */
+.container {
+  font-family: Luckiest Guy;
+  height:98%;
+  width:98%;
+}
+
+.container > * {
+  background-color: #FFD166;
+  border-style: solid;
+  border-width: 10px;
+  border-color: #EF476F;
+  border-radius: 20px;
+  padding: 1em;
+}
+
+/* Typically, you wouldn't specify a height or min-height on this, instead allowing your actual content (i.e., text, images, etc.) to dictate the height of your content area. But since this example has very minimal content, I've set a min-height to mimic a taller content area. */
+.content {
+  min-height: 40%;
+  overflow-y: scroll;
+}
+
+/* Layout is stacked vertically by default (for narrower viewports), so give some breathing room between the sections. */
+/* Select all elements where parent is a container */
+.container > * {
+  margin-bottom: 2%;
+}
+
+/* Now let's apply grid for wider viewports. */
+@media screen and (min-width: 40em) {
+  .container > * {
+    margin-bottom: 0;
+  }
+  /* Define the grid */
+  .container {
+    display: grid;
+    grid-template-columns: 60% 38%;
+    grid-gap: 2%;
+    grid-template-rows: 20% auto 25%;
+  }
+  /* Place items on the grid */
+  .header {
+    grid-column: 1 / span 2;
+    text-align: center;
+  }
+
+  .content {
+    grid-column: 1 / span 2;
+  }
+
+  .footer {
+    text-align: left;
+    font-size: 25px;
+}
+
+/* Use of a customised slider to fit with the overall theme*/
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 50%;
+  height: 25px;
+  background: #118AB2;
+  outline: none;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #EF476F;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #EF476F;
+  cursor: pointer;
+}
+

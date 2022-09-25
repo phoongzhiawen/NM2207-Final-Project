@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="Final Project">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/appstyle.css">
+        <script type="text/javascript" src="jslibs/raphael.js"></script>
+        <script defer type="text/javascript" src="appscripts/main.js"> </script>
+        <title> GAME WITH ME! </title>
+    </head>
+
+  <body> 
+    
+    <div class="container">
+      <header class="header" id="header">
+      </header>
+
+      <article class="content" id="centerDiv">
+      </article>
+
+      <footer class="footer" id="footer">
+      </footer>
+
+      <userinput class="footer" id="userinput">
+        Difficulty Settings!<br>
+        SPEED
+        <input class="slider" type="range" value=500 min=200 max=1200 step=50 id="speedSlider">
+        <speedvalue id="speedvalue"></speedvalue><br>
+        GRID SIZE
+        <input class="slider" type="range" value=10 min=8 max=20 step=1 id="sizeSlider">
+        <sizevalue id="sizevalue"></sizevalue>
+      </userinput>
+    </div>
+  
+
+  </body>
+</html>
+
